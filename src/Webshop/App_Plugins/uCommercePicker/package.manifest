@@ -1,0 +1,55 @@
+{   
+    //editor
+    propertyEditors: [      
+        {
+            /*this must be a unique alias*/ 
+            alias: "uc.picker",
+            /*the name*/
+            name: "uCommerce picker",
+            /*the html file we will load for the editor*/
+            editor: {
+                view: "~/App_Plugins/uCommercePicker/uCommercePicker.html"
+            },
+			prevalues: {
+				fields: [
+					{
+						label: "Selector",
+						description: "Determine which nodes is selectable",
+						key: "selectorType",
+						view: "~/App_Plugins/uCommercePicker/SelectorView.html"
+					},
+					{
+						label: "Tree",
+						description: "Determine which tree should be visible",
+						key: "treeType",
+						view: "~/App_Plugins/uCommercePicker/TreeConfigurationView.html"
+					}
+				]
+			}
+        }
+    ],
+    //array of files we want to inject into the application on app_start
+    javascript: [
+		'~/App_Plugins/uCommercePicker/UcommerceClientMgr.js',
+
+		'~/umbraco/ucommerce/scripts/app/Resources/content.resource.js',
+		'~/umbraco/ucommerce/scripts/app/Services/content-picker.service.js',
+		'~/umbraco/ucommerce/scripts/app/Services/treeNodeIconService.service.js',
+
+		'~/App_Plugins/uCommercePicker/tree.controller.js',
+		'~/umbraco/ucommerce/scripts/app/Controllers/preselected-values-list.controller.js',
+		'~/umbraco/ucommerce/scripts/app/Controllers/content-tree.controller.js',
+		'~/umbraco/ucommerce/scripts/app/Controllers/catalog-search.controller.js',
+		'~/umbraco/ucommerce/scripts/app/Controllers/content-picker.controller.js',
+		'~/umbraco/ucommerce/scripts/app/Controllers/multi-picker.controller.js',
+		
+		'~/umbraco/ucommerce/scripts/app/Directives/ucommerce-catalog-search/ucommerce.catalog.search.directive.js',
+		'~/umbraco/ucommerce/scripts/app/Directives/ucommerce-preselected-values-list/preselectedValuesList.js',
+		'~/umbraco/ucommerce/scripts/app/Directives/ucommerce-tree/ucommerce.tree.directive.js',
+		'~/umbraco/ucommerce/scripts/app/Directives/ucommerce-content-tree/ucommerce.content-tree.directive.js',
+		'~/umbraco/ucommerce/scripts/app/Directives/ucommerce-multi-picker/ucommerce.multi-picker.directive.js',
+		
+
+		'~/App_Plugins/uCommercePicker/factory.js',
+    ]
+}

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="sv-SE" intName="Swedish" localName="Svenska" lcid="29" culture="sv-SE">
+    <creator>
+        <name>Ucommerce Aps</name>
+        <link>http://Ucommerce.net</link>
+    </creator>
+  <area alias="actions">
+    <key alias="Sort products" type="Ucommerce">Sortera produkter</key>
+    <key alias="Sort catalogs" type="Ucommerce">Sortera kataloger</key>
+    <key alias="Sort categories" type="Ucommerce">Sortera kategorier</key>
+    <key alias="Sort Campaigns" type="Ucommerce">Prioritera kampanjer</key>
+    <key alias="Sort Campaign Items" type="Ucommerce">Prioritera aktiviteter</key>
+    <key alias="Sort Parent Definitions" type="Ucommerce">Sortera moder definitioner</key>
+    <key alias="Export products" type="Ucommerce">Exportera produkter</key>
+  </area>
+	<area alias="sections">
+		<key alias="Ucommerce">Ucommerce</key>
+	</area>
+</language>

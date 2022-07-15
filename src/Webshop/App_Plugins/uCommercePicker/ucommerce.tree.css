@@ -1,0 +1,325 @@
+﻿.contentTree ul {
+    padding: 0px;
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.contentTree ul li {
+    margin-top: 5px;
+    line-height: 5px;
+}
+
+.contentTree input[type=checkbox] {
+    margin-left: 5px;
+    margin-top: 0px;
+}
+
+.contentTree .treeLink {
+    height: 20px;
+    line-height: 5px;
+}
+
+.contentTree .treeItemExpandContainer {
+    display: inline-block;
+    position: relative;
+    left: -16px;
+    top: 13px;
+    height: 0px;
+}
+
+.contentTree .treeItemExpandContainer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contentTree .treeItemExpandContainer a span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemOpen span {
+    background-image: url("/umbraco/ucommerce/css/images/collapse.gif");
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span {
+    background-image: url("/umbraco/ucommerce/css/images/expand.gif");
+}
+
+.contentTree .treeNodeIcon {
+    width: auto;
+    display: inline-flex;
+    cursor: pointer;
+    height: 31px;
+    background-repeat: no-repeat;
+    background-position-y: 2px;
+
+}
+
+.contentTree .treeNodeIcon .nodeName {
+    margin-top: 6px;
+    width: auto;
+    display: inline-flex;
+    display: ms-flex;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+    width: 80%;
+    white-space: nowrap;
+}
+
+.multiPickerAction {
+    display: flex;
+    flex-flow: row;
+    line-height: 20px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px !important;
+    min-height: 400px;
+    max-height: 400px;
+    justify-content: space-between;
+}
+
+.multiPickerAction .multiPickerTree {
+    margin-right: 10px;
+    overflow-y: auto!important;
+    overflow-x: hidden;
+}
+
+.multiPickerAction .multiPickerTree, .selectedNodes {
+    padding: 5px;
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+.multiPickerAction .multiPickerTree {
+    margin-right: 10px;
+}
+
+.selectedNodes .selectedNode .node .nodeName {
+    margin-top: 0;
+}
+
+.multiPickerAction .selectedNodes .selected-nodes-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.multiPickerAction .selectedNodes .selected-nodes-container .selectedNode {
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+.selectedNodes .selected-nodes-container .selectedNode .removeIcon {
+    display: flex;
+    flex: 0 0 20px;
+    flex-flow: column;
+    cursor: pointer;
+    padding-right: 15px;
+    margin-top: 9px;
+}
+
+.selectedNodes .selected-nodes-container .selectedNode .node {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.selectedNodes .nodeName {
+    width: auto;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+.selectedNodes .selectedNode .selectedNodeName {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+.selectedNodes .treeNodeIcon {
+    width: auto;
+    cursor: pointer;
+    height: 31px;
+}
+
+.contentPickerSearchInput {
+    width: 100%;
+}
+
+.multiPickerAction .clear-search.clear-search-spinner {
+    margin-top: 5px;
+}
+
+.multiPickerAction .content-picker-search-placeHolder {
+    position: relative;
+}
+
+.multiPickerAction .clear-search {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+    color: #a7a7a7;
+    font-size: 20px;
+    width: 16px;
+}
+
+.multipicker__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.multipicker__header {
+    font-weight: bold;
+    margin-bottom: 20px;
+    flex-basis: 20px;
+}
+
+.selectedNodes {
+    background-color: rgba(0,0,0,0.05);
+    padding-top: 10px;
+}
+
+.multipicker__header > div, .multiPickerAction > div {
+    width: 49%;
+}
+
+ucommerce-multi-picker .multiPicker .multiPickerAction {
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: -32px;
+    padding-top: 32px;
+}
+
+.selectedNodes .removeIcon > img{
+    display: none;
+}
+
+.selectedNode .removeIcon:before {
+    content: '\e1a4';
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "icomoon";
+    color: #f44336;
+}
+
+.selectedNode .removeIcon{
+    position:relative;
+    top: -5px;
+}
+
+.selectedNode:hover{
+    background-color: transparent!important;
+    cursor: default!important;
+}
+
+.multiPickerTree{
+    overflow: hidden!important;
+}
+
+.multiPickerTree >div> .treeTop > .treeLine{
+    display:none!important;
+}
+
+.contextMenuEllipsis{
+    display:none;
+}
+
+.treeLine .treeLink{
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+.treeLine .treeNodeIcon{
+    display: inline;
+    padding-top: 0px;
+}
+
+.treeLine .nodeName{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    bottom: 2px;
+}
+
+.treeLine .treeLink:hover{
+    cursor: pointer;
+}
+
+.treeLine .treeNodeIcon:hover{
+    background: none;
+}
+
+.treeLine .treeItemExpandContainer{
+    top: 5px;
+}
+
+.treeLine i.icon:before{
+    position: relative;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemOpen span {
+    background: none;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemOpen span::after {
+    content: "▼";
+    color: #1b264f;
+    font-size: 0.7em;
+    position: relative;
+    top: 4px;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span {
+    background: none;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span::after {
+    content: "►";
+    color: #1b264f;
+    font-size: 0.7em;
+    position: relative;
+    top: 4px;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span::after:hover,
+.contentTree .treeItemExpandContainer a.treeItemOpen span::after:hover
+{
+    color: #2152a3;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-size:18px;
+}
+
+.treeLine:hover {
+    color: #2152a3;
+    cursor: pointer;
+}
+
+.content-picker-search-result{
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.content-picker-search-result-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    top:-2px;
+}
+
+.content-picker-search-result .content-picker-search-result-checkbox{
+    margin-top: 4px!important;
+}

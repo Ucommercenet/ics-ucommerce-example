@@ -1,0 +1,260 @@
+.dataList tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+    border-top: 1px solid #e9e9eb;
+}
+
+.dataList tbody tr:nth-child(odd) {
+    border-top: 1px solid #e9e9eb;
+    background-color: #FFFFFF;
+}
+
+.dataList tbody tr.odd {
+	background-color: white;
+}
+
+.dataList th
+{
+	width: auto !important;
+	font-weight: bold;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+}
+
+.dataList tbody tr
+{
+	border-style: none;
+}
+
+table.dataList 
+{
+	line-height: normal;
+	border-collapse: collapse;
+}
+
+    table.dataList .amountInput {
+        width: 100%;
+    }
+
+.dataList tr.clickable:hover {
+    cursor: pointer;
+}
+.dataList tbody tr:hover{
+    background-color: #f3f3f5;
+}
+
+
+.dataList tbody tr:hover {
+    cursor: pointer;
+}
+
+.dataList .amountCell {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.dataList .quantityCell {
+    text-align: center;
+}
+
+.dataList .textCell {
+    text-align: left;
+}
+
+.dataList .sort
+ing {
+    background: none;
+}
+
+tr.listOdd {
+}
+
+tr.listEven {
+    background-color: #F5F5F5;
+}
+
+.list thead th {
+    border-bottom: solid;
+    border-bottom-width: 1px;
+}
+
+.list tbody tr:hover {
+    background-color: #DDDDDD;
+}
+
+.list .amountCell {
+    padding-right: 10px;
+    text-align: right;
+    width: 80px;
+}
+
+.list .quantityCell {
+    text-align: center;
+}
+
+.list .textCell {
+    text-align: left;
+}
+
+/* SORT */
+
+#sortable td {
+    padding: 5px;
+}
+
+#sortable th:first-child, #sortable td:first-child {
+    padding-right: 30px;
+}
+
+#sortable thead:last-child {
+    text-align: right;
+}
+
+#sortable tr td:last-child {
+    text-align: right;
+}
+
+#sortable tbody tr:hover {
+    cursor: move;
+    text-decoration: none;
+}
+
+.newSortOrder.newSortOrder {
+    display: none;
+}
+
+.imageButton {
+    width: 36px;
+}
+
+table .sorting {
+    background: none;
+}
+
+table .sorting_desc {
+    background: none;
+}
+
+table .sorting_asc {
+    background: none;
+}
+
+table .sorting_desc span::after {
+    content: "\e128";
+    font-family: 'icomoon';
+}
+
+table .sorting_asc span::after {
+    content: "\e0c9";
+    font-family: 'icomoon';
+}
+
+.dataList td {
+    color: #000;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+
+div.dataTables_filter label input {
+    margin-bottom: 20px;
+}
+
+.propertyPane[data-role=productsInCategory] {
+    box-shadow: none;
+}
+
+.dataTable {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px 0px;
+    border-radius: 3px;
+}
+
+#productTable_filter > label > input[type=text]::-webkit-input-placeholder {
+    color: #a2a1a6;
+    font-weight: 400;
+}
+
+table.dataTable tr.odd td.sorting_1 {
+    background-color: white;
+}
+
+table.dataTable tr.odd td.sorting_2 {
+    background-color: white;
+}
+
+table.dataTable tr.odd td.sorting_3 {
+    background-color: white;
+}
+
+table.dataTable tr.even td.sorting_1 {
+    background-color: white;
+}
+
+table.dataTable tr.even td.sorting_2 {
+    background-color: white;
+}
+
+table.dataTable tr.even td.sorting_3 {
+    background-color: white;
+}
+
+table.dataTable tr.odd td.sorting_1:hover {
+    background-color: #f9f6f5;
+}
+
+table.dataTable tr.odd td.sorting_2:hover {
+    background-color: #f9f6f5;
+}
+
+table.dataTable tr.odd td.sorting_3:hover {
+    background-color: #f9f6f5;
+}
+
+table.dataTable tr.even td.sorting_1:hover {
+    background-color: #f9f6f5;
+}
+
+table.dataTable tr.even td.sorting_2:hover {
+    background-color: #f9f6f5;
+}
+
+table.dataTable tr.even td.sorting_3:hover {
+    background-color: #f9f6f5;
+}
+
+.propertyPane.tablePropertyPane {
+    box-shadow: none;
+}
+
+.propertyPane.tablePropertyPane h2.propertyPaneTitel {
+    display: none;
+}
+
+.propertyPane[data-role="productsInCategory"] .dataTables_wrapper #productTable_filter,
+.propertyPane[data-role="productRelations"] .dataTables_wrapper #product-relations_filter {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    right: initial;
+}
+
+.propertyPane[data-role="productsInCategory"] .dataTables_wrapper#productTable_wrapper, #product-relations_wrapper {
+    position: initial;
+    background: transparent;
+ }
+
+.customDataList {
+    width: 100%;
+}
+
+.sorterContainer h2 {
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+}
+
+.sorterContainer p {
+    padding: 16px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
