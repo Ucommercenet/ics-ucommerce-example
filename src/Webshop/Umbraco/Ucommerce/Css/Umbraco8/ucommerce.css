@@ -1,0 +1,706 @@
+﻿[class^="icon-"],
+[class*=" icon-"] {
+	font-size: 20px;
+	color: #1b264f;
+}
+
+/*CSS to make the top of the application transparent.*/
+.columns.content {
+	background-color: #fff;
+	display: flex;
+}
+
+.ucommerce-tree-header, .tree-wrapper, #mainframe {
+	background-color: white !important;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Arial, Lucida Grande;
+	background-color: #D2D5DA;
+}
+
+#ucommerceMainPageBody {
+	background-color: #D2D5DA;
+	overflow: hidden;
+}
+
+#mainframe {
+	height: 100%;
+	width: 100%;
+	border-left: 1px solid #4C535C;
+	border-top: none;
+	background: rgba(255, 255, 255, 0) !important;
+}
+
+.modal-header span {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.container-fluid {
+	margin: 0;
+	height: 100%;
+	padding: 20px 0;
+	padding-left: 0 !important;
+	padding-right: 0px !important;
+	padding-top: 0 !important;
+	padding-bottom: 0px !important;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.columns {
+	height: 100%;
+}
+
+.background {
+	display: none;
+}
+
+.background * {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #f0f1f2;
+}
+
+.article-tree {
+	background: white;
+	position: relative;
+	overflow-x: visible;
+	overflow-y: visible;
+	display: inline-block;
+	height: 100%;
+	flex: 0 0 360px;
+}
+
+.content-area, .ui-splitter {
+	float: left;
+	display: inline-block;
+	z-index: 2;
+}
+
+.content-area {
+	width: 74.8%;
+}
+
+.ui-splitter {
+	width: 1px;
+	cursor: ew-resize;
+	z-index: 30;
+	overflow: hidden;
+	background-color: #d6d9d6;
+}
+
+.ui-splitter .ui-splitter-top {
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 40;
+	background: none !important;
+}
+
+.ui-splitter .ui-splitter-bottom {
+	position: absolute;
+	border: 2px ridge;
+	width: 6px;
+	z-index: 40;
+}
+
+
+.content-area {
+	flex: 1 1 auto;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+	padding-bottom: 2px;
+}
+
+.ucommerce-navigation-tree {
+	margin-left: 0px;
+	margin-top: 18px;
+}
+
+a.treeItemHidden {
+	background: none;
+	visibility: hidden;
+}
+
+a.dimNode {
+	color: #c0c0c0;
+}
+
+.notifications {
+	position: fixed;
+	min-width: 100%;
+}
+
+.alert.alert-success h4 {
+	display: none;
+}
+
+
+.notifications.bottom-right {
+	bottom: 50px;
+}
+
+a.nodeSelected span div span {
+	background-color: #000;
+}
+
+div.relative {
+	position: relative;
+}
+
+div.absolute {
+	position: absolute;
+}
+
+div.tree-wrapper-content {
+	background: white;
+	background-position-x: -10px;
+}
+
+
+.tree-wrapper {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.ucommerce-modal-iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Content tree */
+
+.contentTree ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.contentTree #root_-1 > ul {
+	margin-top: 20px;
+}
+
+.contentTree ul li {
+	margin: 0 0;
+	padding: 0 0 0 0;
+}
+
+.contentTree ul li .treeTop {
+	padding: 0 0 0 0;
+}
+
+.contentTree ul li .treeLink {
+	width: 100%;
+	white-space: nowrap;
+	cursor: hand;
+}
+
+/* TreeLine is a flex box wrapper for each "line" in the tree */
+
+.contentTree .treeLine {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 4px 0;
+	cursor: pointer;
+}
+
+.contentTree .treeLine > .treeItemExpandContainer {
+	flex-grow: 0;
+	flex-basis: 20px;
+	min-width: 20px;
+}
+
+.contentTree .treeLine > .treeLink {
+	flex-grow: 1;
+	flex-basis: 200px;
+	overflow: hidden;
+}
+
+.contentTree .treeLine > .contextMenuEllipsis {
+	flex-grow: 0;
+	flex-basis: 20px;
+}
+
+.contentTree .treeLine:hover .contextMenuEllipsis {
+	visibility: visible;
+	color: #2152a3;
+}
+
+
+.contentTree .treeLine:hover .nodeName {
+	color: #2152a3;
+}
+
+.contentTree .treeLine:hover [class^="icon-"],
+.contentTree .treeLine:hover [class*=" icon-"] {
+	color: #2152a3;
+}
+
+
+
+
+/* Start of indentation hack */
+
+.contentTree .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 0px;
+}
+
+.contentTree .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 0px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 20px;
+	min-width: 20px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 40px;
+	min-width: 40px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 60px;
+	min-width: 60px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 80px;
+	min-width: 80px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 100px;
+	min-width: 100px;
+}
+
+.contentTree .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .treeTop .indentation {
+	flex-grow: 0;
+	flex-basis: 120px;
+	min-width: : 120px;
+}
+
+/* End of indentation hack */
+
+/* Context menu button */
+
+
+.contentTree .treeTop .contextMenuEllipsis {
+	visibility: hidden;
+	font-size: 1.6em;
+	font-weight: 900;
+	align-self: center;
+	color: #1b264f;
+	text-decoration: none;
+	flex: 0 0 auto;
+	justify-content: flex-end;
+	padding: 3px 5px;
+	text-align: center;
+	margin: 0 10px 0 auto;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+.contentTree .treeTop .contextMenuEllipsis:hover {
+	color: #2152a3;
+	background-color: #ddd;
+}
+
+
+.contentTree li:hover ul {
+	background-color: white;
+}
+
+.contentTree .treeItemExpandContainer {
+	display: inline;
+	padding-left: 6px;
+}
+
+.contentTree .treeItemExpandContainer .invisible {
+	visibility: hidden;
+}
+
+.contentTree .treeItemExpandContainer .treeItemExpand {
+	cursor: pointer;
+}
+
+
+.contentTree .treeItemExpandContainer a.invisible {
+	padding-left: 0px!important;
+}
+
+.contentTree .treeItemExpandContainer a span {
+	width: 15px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+/*Tree Structure - Commerce Settings*/
+
+.contentTree .treeItemExpandContainer a.treeItemOpen span {
+	background: none;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemOpen span::after {
+	content: "▼";
+	color: #1b264f;
+	font-size: 0.7em;
+	position: relative;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span {
+	background: none;
+}
+
+.contentTree .treeItemExpandContainer a.treeItemClosed span::after {
+	content: "►";
+	color: #1b264f;
+	font-size: 0.7em;
+	position: relative;
+}
+
+
+
+div.treeItemExpandContainer.speak.ng-scope>a.treeItemHidden:first-of-type {
+	font-size: 19px;
+	visibility: visible;
+}
+
+div.treeItemExpandContainer.speak.ng-scope>a
+{
+	visibility: visible;
+	line-height: 20px;
+}
+
+div#ordersSearch_-1>div.treeItemExpandContainer.speak.ng-scope,
+div#settingsSearch_-1>div.treeItemExpandContainer.speak.ng-scope
+{
+	background-image: none;
+}
+
+div#ordersSearch_-1>div.treeItemExpandContainer.speak.ng-scope>a,
+div#settingsSearch_-1>div.treeItemExpandContainer.speak.ng-scope>a
+{
+}
+
+
+div#root_-1>div:first-child, div#settings_-5>div:first-child, div#settingsSecurity_-5>div:first-child,
+div#campaign_2>div:first-child, div#productCategory_73>div:first-child,
+div#catalog_-1>div:first-child, div#orders_-2>div:first-child, div#marketing_-3>div:first-child
+{
+	background-image: none;
+}
+
+.treeLink .fa {
+	display: none;
+}
+
+div#catalog_-1>div.treeLink.ng-scope>span.treeNodeIcon,
+div#orders_-2>div.treeLink.ng-scope>span.treeNodeIcon,
+div#marketing_-3>div.treeLink.ng-scope>span.treeNodeIcon
+{
+	vertical-align: inherit;
+	margin-top: 0px;
+	padding-left: 0px;
+}
+
+div#root_-1>ul>li>div#catalog_-1>div.treeLink.ng-scope>span.treeNodeIcon,
+div#root_-1>ul>li>div#orders_-2>div.treeLink.ng-scope>span.treeNodeIcon,
+div#root_-1>ul>li>div#marketing_-3>div.treeLink.ng-scope>span.treeNodeIcon{
+	margin-top:3px;
+}
+
+
+div#root_-1>ul>li>div#catalog_-1>div.treeItemExpandContainer.speak.ng-scope:first-child,
+div#root_-1>ul>li>div#orders_-2>div.treeItemExpandContainer.speak.ng-scope:first-child,
+div#root_-1>ul>li>div#marketing_-3>div.treeItemExpandContainer.speak.ng-scope:first-child
+{
+	display: table-cell;
+}
+
+
+
+
+.contentTree .treeNodeIcon {
+	width: 100%;
+	display: inline-block;
+	cursor: pointer;
+	height: 21px;
+	background-repeat: no-repeat;
+	background-size: 16px;
+	line-height: 16px;
+}
+
+.contentTree .treeNodeIcon .nodeName {
+	width: 100%;
+	display: inline-block;
+	font-size: 15px;
+	font-family: open_sansregular,sans-serif;
+	white-space: nowrap;
+	margin-left: 16px;
+	padding-right: 4px;
+	padding-left: 4px;
+	line-height: 18px;
+	color: #1b264f;
+	position: relative;
+}
+
+/* Tree selection + hover */
+
+.contentTree .treeLine {
+	box-shadow: none;
+	border: 2px solid #fff;
+	max-width: 500px;
+}
+
+.contentTree .nodeSelectedStyle .nodeName {
+	background: none;
+}
+
+.contentTree .treeLine.nodeSelected {
+	background: #f5c1bc;
+	border: 2px solid #f5c1bc;
+}
+
+.contentTree .treeLine.showingOptions {
+	border: 2px solid #f5c1bc;
+}
+
+.contentTree .treeLine:hover {
+	background-color: #f3eeee;
+	border: 2px solid #f3eeee;
+}
+
+.contentTree .treeLine.nodeSelected:hover {
+	background: #f5c1bc;
+	border: 2px solid #f5c1bc;
+}
+
+
+/* Context Menu */
+
+h4.contextTitle {
+	margin: 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	font-size: 18.75px;
+	font-weight: 400;
+	border-bottom: 1px solid #e9e9eb;
+	height: 70px;
+	box-sizing: border-box;
+	padding: 0 20px;
+	line-height: 65px;
+	align-items: center;
+}
+
+
+.contentTree div.treeContextMenu {
+	top: 0px;
+	height: 100%;
+	width: auto;
+	color: #000;
+	display: inline;
+}
+
+.contentTree .treeContextMenu.backdrop {
+	top: 0;
+	left: 100%;
+	width: 500%;
+	height: 100%;
+	z-index: 50;
+	display: inline-block;
+	position: absolute;
+}
+
+.contentTree div.treeContextMenu > ul {
+	top: 0;
+	right: -360px;
+	width: 360px;
+	height: 100%;
+	z-index: 100;
+	background: #fff;
+	-webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.175);
+	-moz-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.175);
+	box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.175);
+	border-radius: 2px;
+	margin: 0;
+	display: block;
+	list-style-type: none;
+	position: absolute;
+	padding: 0;
+	color: #000;
+	border-left: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.contentTree div.treeContextMenu > ul > li {
+	margin: 0;
+	font-size: 11px;
+	line-height: 16px;
+	white-space: nowrap;
+	padding: 15px 20px;
+}
+
+.contentTree div.treeContextMenu > ul > li > a {
+	font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+	background-repeat: no-repeat;
+	color: #000;
+	display: block;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.contentTree div.treeContextMenu > ul > li > a > i {
+	margin-right: 14px;
+}
+
+.contentTree div.treeContextMenu > ul > li:hover {
+	background-color: rgb(247,247,247);
+}
+
+.contentTree div.treeContextMenu > ul > li:hover .nodeName {
+	color: #2152a3;
+}
+
+
+.contentTree div.treeContextMenu > ul > li.separator {
+	border-top: 1px solid #e3e3e3;
+	padding: 0;
+	display: none;
+	padding: 3px 15px;
+	margin-top: 8px;
+}
+
+
+
+/* Tree Top */
+
+.contentTree .dimNode span {
+	color: #c0c0c0;
+}
+
+.contentTree ul .treeTop {
+	font-weight: normal;
+}
+
+.contentTree #root_-1 > .treeLine > .treeLink > .treeNodeIcon {
+	background: none !important;
+	padding-left: 0 !important;
+	margin: 10px 0 28px 0 !important;
+}
+
+.contentTree #root_-1 > .treeLine > .treeLink > .treeNodeIcon > .nodeName {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+
+
+.contentTree div.treeContextMenu > ul > li.separator > a {
+	height: 0;
+	text-decoration: none;
+}
+
+.contentTree div.treeContextMenu > ul > li.separator > a:hover {
+	border: none;
+}
+
+.contentTree .treeTop {
+	font-weight: 700;
+	line-height: 18px;
+}
+
+.contentTree .treeNodeIcon span {
+	line-height: 23px;
+}
+
+.contentTree > .treeTop > .treeLine > .treeLink span {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+/* End of tree */
+
+
+
+.ucommerce-modal.ucommerce-modal {
+	border-radius: 0;
+	background-color: #f0f0f0;
+	border: 1px solid rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.modal-backdrop, .modal-backdrop.fade.in.modal-backdrop.fade.in.modal-backdrop.fade.in {
+	opacity: .1;
+	filter: alpha(opacity=10);
+}
+
+.content-area #mainframe {
+	border: none;
+}
+
+#uCommerceHeader {
+	height: 50px;
+	background-color: #2b2b2b;
+}
+
+.sc-global-logo {
+	display: inline-block;
+	margin: 8px 14px;
+	height: 33px;
+	width: 33px;
+	background: url("/sitecore/shell/Themes/Standard/Images/global_logo.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
+}
+
+.sc-global-logo:hover {
+	background-position: left bottom;
+	text-decoration: none;
+}
+
+iframe#uCommerce-contentFrame {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	border: none;
+}
+
+.gridster li.preview-holder {
+	background-color: white !important;
+	list-style: none;
+}
+
+#ucommerceMainPageBody .wrapper {
+	height: 100%;
+}

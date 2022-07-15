@@ -1,0 +1,41 @@
+﻿<div class="treeTop {{isSelectedNode(tree)}}" id="{{tree.nodeType}}_{{tree.id}}" ng-class="{contextMenu: tree.options.length > 0}" >
+    <div class="treeLine" data-ng-class="treeNodeLinkClasses(tree)" data-ng-click="treeSetSelected(tree)">
+        <span class="indentation"></span>
+    
+        <div class="treeItemExpandContainer speak" >
+            <a data-ng-click="toggleChildNodes(tree, $event)" ng-style="getPaddingStyle(tree)" ng-class="itemExpandClasses(tree)">
+                <span>&nbsp;</span>
+            </a>
+        </div>
+
+        
+        <div class="treeLink" data-right-click="toggleOptions(tree, $event)" data-ng-class="treeNodeLinkClasses(tree)">
+            <i class="{{tree.icon}}" ng-show="iconIsIconFont(tree)"></i>
+            <span class="{{nodeIconClasses(tree.icon)}}" ng-style="getNodeIconStyle(tree.icon, tree.name)">
+                <input type="checkbox" ng-click="checkboxClicked(tree)" ng-show="showCheckBoxForNode(tree)" ng-checked="isSelectedCheckbox(tree)" id="{{tree.nodeType}}_{{tree.id}}" name="selected_tree_values" value="{{tree.nodeType}}_{{tree.id}}" />
+                <div class="nodeName">
+                    <span>{{tree.name}}</span>
+                </div>  
+            </span>
+        </div>
+
+        <div class="contextMenuEllipsis" data-ng-show="tree.options.length > 0" data-ng-click="toggleOptions(tree, $event)">···</div> 
+    </div>
+    <div class="treeContextMenu" data-ng-show="tree.showOptions" >
+        <ul>
+            <h4 class="contextTitle">{{tree.name}}</h4> 
+            <li data-ng-repeat="option in tree.options" ng-class="option.cssClass" data-ng-click="handleAction(option, tree); hideOptions(tree)">
+                <a href="javascript:;" ng-style="treeNodeOptionMenuStyle(option.icon)">
+                    <i class="{{option.icon}}" ng-show="iconIsIconFont(tree)"></i>
+                    {{option.displayName}}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="treeContextMenu backdrop" ng-show="tree.showOptions" ng-click="hideOptions(tree)"></div>
+    <ul style="list-style-type:none" data-ng-show="tree.nodes.length > 0">
+        <li data-ng-repeat="child in tree.nodes" data-ng-class="{selectedChildListItem: child.selected}">
+            <ucommerce-tree tree-indetion-size="treeIndetionSize" tree="child" pickertype="pickertype" multi-select="multiSelect" enforce-checkbox-click="enforceCheckboxClick" has-right-click-menu="hasRightClickMenu" content-picker-type="contentPickerType" selected-node-style="selectedNodeStyle" pre-selected-values="preSelectedValues" has-checkbox-for="hasCheckboxFor" icon-folder="iconFolder"></ucommerce-tree>
+        </li>
+    </ul>
+</div>

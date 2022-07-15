@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="de-DE" intName="German (DE)" localName="Deutsch (DE)" lcid="7" culture="de-DE">
+    <creator>
+        <name>Ucommerce Aps</name>
+        <link>http://Ucommerce.net</link>
+    </creator>
+  <area alias="actions">
+    <key alias="Sort products" type="Ucommerce">Produkte sortieren</key>
+    <key alias="Sort catalogs" type="Ucommerce">Katalogen sortieren</key>
+    <key alias="Sort categories" type="Ucommerce">Kategorien sortieren</key>
+    <key alias="Sort Campaigns" type="Ucommerce">Kampagnen sortieren</key>
+    <key alias="Sort Campaign Items" type="Ucommerce">Aktivitäten sortieren</key>
+    <key alias="Sort Parent Definitions" type="Ucommerce">Sortieren Mutter Definitionen</key>
+    <key alias="Export products" type="Ucommerce">Produkte exportieren</key>
+  </area>
+	<area alias="sections">
+		<key alias="Ucommerce">Ucommerce</key>
+	</area>
+</language>

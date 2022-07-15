@@ -1,0 +1,19 @@
+<iframe id="ucommerceIFrame" src="/umbraco/ucommerce/shell/Index.aspx" style="width: 100%; border: 0; display:block;"></iframe>
+
+<script type="application/javascript">
+    function resize() {
+        document.querySelector('.umb-dashboard__content').style.padding = '0';
+
+        var iFrame = document.getElementById('ucommerceIFrame');
+        var headerHeight = document.querySelector('.umb-app-header').getBoundingClientRect().height;
+
+        iFrame.height = window.innerHeight - (headerHeight);
+    }
+
+    resize();
+
+    window.onresize = function(event) {
+        resize();
+    };
+
+</script>

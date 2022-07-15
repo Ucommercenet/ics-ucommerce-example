@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Braintree</title>
+	<script src="https://js.braintreegateway.com/web/dropin/1.25.0/js/dropin.min.js"></script>
+</head>
+
+<body>
+	<form id="payment-form" method="post" action='##CALLBACK_URL##'>
+		<div id="dropin-container"></div>
+		<input type="hidden" id="nonce" name="payment_method_nonce"/>
+		<input type="submit" value="Confirm" />
+	</form>
+	<div id="payment-errors" style="color: red">##ERROR_MESSAGES##</div>
+</body>
+
+<script type="text/javascript">
+	const form = document.getElementById('payment-form');
+	const serverErrorsHTML = '##ERROR_MESSAGES##';
+	const threeDSecureParameters = JSON.parse('##THREE_D_SECURE_PARAMETERS##');
+
+	braintree.dropin.create({
+		authorization: '##CLIENT_TOKEN##',
+		container: '#dropin-container',
+		threeDSecure: true
+	}).then(dropinInstance => {
+		form.addEventListener('submit', event => {
+			event.preventDefault();
+
+			dropinInstance.requestPaymentMethod({
+				threeDSecure: threeDSecureParameters
+			}).then((payload) => {
+				document.getElementById('nonce').value = payload.nonce;
+				form.submit();
+			}).catch(error => {
+				showError(error);
+			});
+		});
+	}).catch(error => {
+		showError(error);
+	});
+
+	function showError(errorMsg) {
+		const paymentErrorsElement = document.getElementById('payment-errors');
+		paymentErrorsElement.innerHTML = serverErrorsHTML;
+
+		if (!paymentErrorsElement.firstChild)
+			paymentErrorsElement.innerHTML = '<ul></ul>';
+
+		const newErrorElement = document.createElement('li');
+		newErrorElement.textContent = errorMsg;
+		paymentErrorsElement.firstChild.appendChild(newErrorElement);
+	}
+</script>
+</html>

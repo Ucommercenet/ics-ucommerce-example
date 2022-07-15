@@ -1,0 +1,119 @@
+
+.propertypane {
+	position: relative;
+	display: block;
+	line-height: 1.1;
+	padding: 5px;
+    display: none;
+	margin: 0px 7px 7px 7px;
+	text-align: left;
+	clear: both;
+	float: none;
+}
+
+.propertypane th {
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    width: 16%;
+}
+
+.propertypane, .propertypane td {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
+
+.propertypane small {
+	font-weight: normal;
+	color: #666;
+}
+
+.propertyItem {
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #f6f6f7;
+}
+
+.propertyPane .propertyItem > .propertyItemHeader + div .propertyItemContent {
+    width: 100%;
+}
+
+.propertyName {
+	font-weight: bold;
+}
+
+.propertyItemHeader {
+	font-weight: normal;
+	word-wrap: break-word;
+}
+
+.propertyItemContent {
+}
+
+.propertyItem .PropertyItemContentWrapper {
+    width: 66.6%;
+    display: inherit;
+    vertical-align: middle;
+}
+
+.propertyItem .PropertyItemContentWrapper .propertyItemContent {
+    margin: 0;
+}
+
+.propertyItemContent.propertyItemContentSmall {
+	margin-left: 140px;
+}
+
+.propertyItemHeader.propertyItemContentSmall {
+	max-width: 140px;
+	word-wrap: break-word;
+}
+
+.propertyDescription {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-top: 5px;
+    color: #817f85!important;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+}
+
+h2.propertyPaneTitel {
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #343434;
+    margin: 0;
+    border-bottom: 1px solid #e9e9eb;
+}
+
+.index.progress.message {
+    margin: 10px 0px 20px 20px;
+    padding-bottom: 10px;
+}
+
+div.propertyPaneFooter {
+    display: none;
+}
+
+.propertyPaneTitel {
+}
+
+.shippingPane .propertyPaneTitel,.shippingPane .propertyPaneTitel {
+	display: inherit;
+}
+
+@media (max-width: 768px) {
+    .propertyItemHeader {
+        width: 100% !important;
+    }
+
+    .propertyItemContent {
+        margin-left: 0 !important;
+    }
+}
